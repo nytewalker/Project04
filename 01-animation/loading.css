@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #101116;
+    font-family: 'Space Mono';
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.header{
+    font-size: 30px;
+    font-weight: 800;
+    position: absolute;
+    top: 20%;
+}
+
+.load-container{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 50px;
+    width: 15px;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px #030716;
+}
+
+.box1{
+    animation: 4s loading infinite ease-in-out .2s;
+    -webkit-animation: 4s loading infinite ease-in-out .2s;
+}
+.box2{
+    animation: 4s loading infinite ease-in-out .4s;
+    -webkit-animation: 4s loading infinite ease-in-out .4s;
+}
+.box3{
+    animation: 4s loading infinite ease-in-out .6s;
+    -webkit-animation: 4s loading infinite ease-in-out .6s;
+}
+.box4{
+    animation: 4s loading infinite ease-in-out .8s;
+    -webkit-animation: 4s loading infinite ease-in-out .8s;
+}
+
+
+@keyframes loading{
+    0%{
+        transform: translate(0);
+        -webkit-transform: translate(0);
+        -moz-transform: translate(0);
+        -ms-transform: translate(0);
+        -o-transform: translate(0);
+         
+    }
+
+    33%{
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+        -moz-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        -o-transform: translateY(30px);
+
+}
+
+    69%{
+        transform: translateY(-40px);
+        -webkit-transform: translateY(-40px);
+        -moz-transform: translateY(-40px);
+        -ms-transform: translateY(-40px);
+        -o-transform: translateY(-40px);
+}
+
+100%{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+
+}

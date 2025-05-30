@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: #121419;
+    font-family: 'Outfit';
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e2e2e2;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    scroll-padding: 8px;
+}
+
+.header{
+    font-size: 4em;
+    position: relative;
+}
+
+.arrow{
+    position: absolute;
+    animation: Updown infinite 2s ease-in-out;
+    -webkit-animation: Updown infinite 2s ease-in-out;
+    margin-left: 12px;
+}
+
+
+section{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+    padding: 2rem 4rem;
+    text-align: justify;
+    margin-top: 5rem;
+}
+
+.img-container{
+    --size: 1280px;
+    width: var(--size);
+    height: 800px;
+    margin-bottom: 3rem;
+    margin-top: 12rem;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    animation: appearLeft linear;
+    -webkit-animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+}
+
+section h2{
+    font-size: 8em;
+}
+
+section p{
+    font-size: 2.2em;
+}
+
+.scroll-reveal span{
+    color: #ffffff0d;
+    background-clip: text;
+    background-size: 0% 100%;
+    background-image: linear-gradient(90deg, #ffffff, #3c4a32);
+    background-repeat: no-repeat;
+    animation: scrollReveal linear ;
+    -webkit-animation: scrollReveal linear forwards;
+    animation-timeline: view();
+}
+
+.scroll-reveal h2 span{
+    animation-range-start: cover 20vh;
+    animation-range-end: cover 30vh;
+}
+.scroll-reveal p span{
+    animation-range-start: cover 24vh;
+    animation-range-end: cover 40vh;
+}
+
+@keyframes scrollReveal{
+    to{
+        background-size: 100% 100%;
+    }
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes Updown{
+  0%{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+50%{
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+}
+}
